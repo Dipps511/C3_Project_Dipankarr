@@ -47,7 +47,7 @@ public class Restaurant {
         Item newItem = new Item(name,price);
         menu.add(newItem);
     }
-    
+
     public void removeFromMenu(String itemName) throws itemNotFoundException {
 
         Item itemToBeRemoved = findItemByName(itemName);
@@ -56,7 +56,7 @@ public class Restaurant {
 
         menu.remove(itemToBeRemoved);
     }
-
+// Ignoring the methods written for output formatting as described in the instruction of part3 of assignment
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
                 +"Location:"+ location + "\n"
@@ -70,14 +70,16 @@ public class Restaurant {
         return name;
     }
 
-    public int calculateTotalCostOfOrder(List<String> orderItems){
+    public int calculateTotalCostOfOrder(List<String> orderItems) {
         int total = 0;
+        if (orderItems.size() > 0) {
+            for (String NameOfItem : orderItems) {
+                Item itemDetails = findItemByName(NameOfItem);
+                total = total + itemDetails.getPrice();
+            }
+        }
+            return total;
 
-        return total;
     }
-
-
-
-
-
 }
+
