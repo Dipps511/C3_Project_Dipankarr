@@ -57,14 +57,14 @@ public class Restaurant {
         menu.remove(itemToBeRemoved);
     }
 // Ignoring the methods written for output formatting as described in the instruction of part3 of assignment
-    public void displayDetails(){
+    /*public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
                 +"Location:"+ location + "\n"
                 +"Opening time:"+ openingTime +"\n"
                 +"Closing time:"+ closingTime +"\n"
                 +"Menu:"+"\n"+getMenu());
 
-    }
+    }*/
 
     public String getName() {
         return name;

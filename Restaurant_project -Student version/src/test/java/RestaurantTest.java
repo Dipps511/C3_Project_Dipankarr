@@ -90,13 +90,15 @@ class RestaurantTest {
         restaurant.addToMenu("Tofu", 302);
         restaurant.addToMenu("Pancakes", 500);
         restaurant.addToMenu("Vada Pav", 101);
-        int expectedTotal = 119+97+302+500+101;
+        int expectedTotal = 119+97+302+500+101+119+269;
         List<String> menuItemsToBeTotaled = new ArrayList<String>();
         menuItemsToBeTotaled.add("Tomato soup");
         menuItemsToBeTotaled.add("Pizza");
         menuItemsToBeTotaled.add("Tofu");
         menuItemsToBeTotaled.add("Pancakes");
         menuItemsToBeTotaled.add("Vada Pav");
+        menuItemsToBeTotaled.add("Vegetable lasagne");
+        menuItemsToBeTotaled.add("Sweet corn soup");
         // Act
         int totalCost = restaurant.calculateTotalCostOfOrder(menuItemsToBeTotaled);
         // Assert

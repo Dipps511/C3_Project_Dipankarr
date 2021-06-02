@@ -11,12 +11,13 @@ public class Item {
         return name;
     }
     public int getPrice() { return price; }
-    @Override
+    // Ignoring the methods written for output formatting as described in the instruction of part3 of assignment
+    /*@Override
     public String toString(){
         return  name + ":"
                 + price
                 + "\n"
                 ;
     }
-
+*/
 }
