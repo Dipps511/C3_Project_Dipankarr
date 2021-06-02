@@ -81,6 +81,26 @@ class RestaurantTest {
     }
 
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+    @Test
+    public void get_total_cost_should_return_total_price_of_all_the_items_added_in_the_list(){
+        // Arrange
+        restaurant = createRestaurant();
+        restaurant.addToMenu("Tomato soup",119);
+        restaurant.addToMenu("Pizza", 97);
+        restaurant.addToMenu("Tofu", 302);
+        restaurant.addToMenu("Pancakes", 500);
+        restaurant.addToMenu("Vada Pav", 101);
+        int expectedTotal = 119+97+302+500+101;
+        List<String> menuItemsToBeTotaled = new ArrayList<String>();
+        menuItemsToBeTotaled.add("Tomato soup");
+        menuItemsToBeTotaled.add("Pizza");
+        menuItemsToBeTotaled.add("Tofu");
+        menuItemsToBeTotaled.add("Pancakes");
+        menuItemsToBeTotaled.add("Vada Pav");
+        // Act
+        int totalCost = restaurant.calculateTotalCostOfOrder(menuItemsToBeTotaled);
+        // Assert
+        assertEquals(expectedTotal, totalCost);
+    }
 
 }

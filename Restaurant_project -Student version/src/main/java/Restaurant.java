@@ -70,6 +70,11 @@ public class Restaurant {
         return name;
     }
 
+    public int calculateTotalCostOfOrder(List<String> orderItems){
+        int total = 0;
+
+        return total;
+    }
 
 
 
